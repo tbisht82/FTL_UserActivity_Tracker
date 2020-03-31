@@ -16,24 +16,24 @@ def id_generate():
     id_new = ''.join(random.choice(letters_and_digits) for i in range(6))
     id_new = 'W0'+id_new+str(random.randint(0, 10000))
     return id_new
-    # if id_already_exist(id_new):
-    #     return id_new
-    # else:
-    #     id_generate()
+    if id_already_exist(id_new):
+        return id_new
+    else:
+        id_generate()
 
 
-# def id_already_exist(id_new):
-#     """
-#     Checks whether newly generated id by id_generate() already exist in db or it is a unique user_id
-#     :param id_new:
-#     :return: boolean
-#     """
-#
-#     q = User.objects.filter(user_id=id_new).count()
-#     if q == 0:
-#         return True
-#     else:
-#         return False
+def id_already_exist(id_new):
+    """
+    Checks whether newly generated id by id_generate() already exist in db or it is a unique user_id
+    :param id_new:
+    :return: boolean
+    """
+
+    q = User.objects.filter(user_id=id_new).count()
+    if q == 0:
+        return True
+    else:
+        return False
 
 
 class User(AbstractBaseUser, PermissionsMixin):
