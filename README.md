@@ -20,39 +20,6 @@ This endpoint will provide the list of all the users and their activity timings
 2. http://127.0.0.1:8000/api/activity/all/<user_id>
 This endpoint will provide the activity timings and user data for a specific user
 
-format of API response for end point:
-{
-    "ok": true/flase, -->>> ok will be true if there is members otherwise false
-    "members": [
-        {
-            "id": "",
-            "real_name": "",
-            "tz": "",
-            "activity_periods": [
-                {
-                    "start_time": "",
-                    "end_time": ""
-                },
-                {
-                    "start_time": "",
-                    "end_time": ""
-                }
-            ]
-        },
-        {
-            "id": "",
-            "real_name": "",
-            "tz": "",
-            "activity_periods": [
-                {
-                    "start_time": "",
-                    "end_time": ""
-                },
-                {
-                    "start_time": "",
-                    "end_time": ""
-                }
-            ]
-        }
-   ]
-}
+# Herouk URL:
+1. https://useractivity-tracker.herokuapp.com/api/activity/all/
+2. https://useractivity-tracker.herokuapp.com/api/activity/all/<user_id>
