@@ -6,8 +6,8 @@ from core.models import User
 
 class AllActivityListView(ListAPIView):
     """
-    This List View will provide a response of ok and members
-    ok --> true if there is any record in members else false
+    This List View will provide a response of ok and members,
+    ok --> true if there is any record in members else false,
     members --> user list with their activity times
     """
     permission_classes = (AllowAny,)
