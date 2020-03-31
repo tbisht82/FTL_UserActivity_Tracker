@@ -15,7 +15,7 @@ def id_generate():
     letters_and_digits = string.ascii_uppercase + string.digits
     id_new = ''.join(random.choice(letters_and_digits) for i in range(6))
     id_new = 'W0'+id_new+str(random.randint(0, 10000))
-    return id_new
+    # return id_new
     if id_already_exist(id_new):
         return id_new
     else:
